@@ -30,7 +30,7 @@ void	ft_putnbr_base_rec(int nbr, char *base, int size)
 	write(1, &a, 1);
 }
 
-int	ft_ver_bas(char *base)
+int	ft_ver_base(char *base)
 {
 	int	i;
 
