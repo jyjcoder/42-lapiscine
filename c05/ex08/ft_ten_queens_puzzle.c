@@ -18,11 +18,12 @@ int	ft_abs(int a)
 {
 	if (a < 0)
 		return (-a);
-	return (a);
+	else
+        return (a);
 }
 
 
-void print_queen(){
+void print_queen(int *arr){
     int i;
     char q;
     i = 0;
@@ -35,7 +36,7 @@ void print_queen(){
     write(1, "\n", 1);
 }
 
-void check(){
+void check(int col, int *arr){
     int j;
 
     j = 0;
@@ -72,7 +73,7 @@ void	dfs(int col, int *arr, int *answer)
 	}
 }
 
-int main(){
+int ft_ten_queens_puzzle(void){
     int arr[10];
     int i;
     int count;
@@ -84,3 +85,10 @@ int main(){
     dfs(0, arr, answer);
     return(*answer);
 }
+
+/*#include <stdio.h>
+
+int main(){
+    printf("%d", ft_ten_queens_puzzle);
+}
+*/
