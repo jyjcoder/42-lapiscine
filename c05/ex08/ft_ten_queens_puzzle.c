@@ -13,6 +13,7 @@
 int	ft_ten_queens_puzzle(void);
 
 #include <unistd.h>
+// #include <stdio.h> printf 사용하여 테스트케이스 이용하기 위해서는 추가해줘야함.
 
 int	ft_abs(int a)
 {
@@ -37,9 +38,7 @@ void print_queen(int *arr){
 }
 
 void check(int col, int *arr){
-    int j;
-
-    j = 0;
+    int j = 0;
     while(j < col){
         if(arr[j] == arr[col])
             return(1);
@@ -52,7 +51,7 @@ void check(int col, int *arr){
 
 void	dfs(int col, int *arr, int *answer)
 {
-	int	i;
+	int i; // 나중에 42 서울에서는 스페이스바 인식 안되니까 만약에 vscode 사용 할거면 tap으로 바꿔서 사용할 것
 
 	i = 0;
 	if (col == 10)
@@ -77,7 +76,7 @@ int ft_ten_queens_puzzle(void){
     int arr[10];
     int i;
     int count;
-    int *answer;
+    int *answer; // answer에는  배열 값을 저장해야 하나 ? 아마 그럴듯
 
     i = 0;
     answer = &count;
@@ -86,9 +85,9 @@ int ft_ten_queens_puzzle(void){
     return(*answer);
 }
 
-/*#include <stdio.h>
+#include <stdio.h>
 
 int main(){
-    printf("%d", ft_ten_queens_puzzle);
+    printf("%d", ft_ten_queens_puzzle); // #include <stdio.h> 안넣었으니까 unistd는 write 함수를 사용
 }
-*/
+
